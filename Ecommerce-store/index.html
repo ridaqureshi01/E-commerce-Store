@@ -1,4 +1,3 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,19 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home - PureRadiance</title>
   <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
+    * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
       background-color: #f9f4f9;
       color: #4a004e;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
+
+    /* Navbar */
     nav {
-      background-color:#d8b4dc;
+      background-color: #d8b4dc;
       padding: 15px;
       text-align: center;
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     }
+
     nav a {
       color: #4a004e;
       margin: 0 20px;
@@ -27,68 +36,90 @@
       font-size: 18px;
       transition: color 0.3s;
     }
+
     nav a:hover {
       color: #cc98c6;
     }
+
+    /* Container */
     .container {
-      padding: 40px;
+      padding: 40px 20px;
       text-align: center;
+      flex: 1;
     }
+
     h1 {
       font-size: 36px;
       color: #4d1e75;
+      margin-bottom: 10px;
     }
+
     .products {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
       margin-top: 30px;
-      justify-items: center;
     }
+
     .product {
-      width: 200px;
+      width: 240px;
       padding: 20px;
       background: #e5cbe2;
       border-radius: 16px;
       box-shadow: 0 4px 10px rgba(108, 52, 131, 0.1);
       transition: transform 0.3s ease;
+      text-align: center;
     }
+
     .product:hover {
       transform: translateY(-5px);
     }
+
     .product img {
       width: 100%;
+      height: 230px;
+      object-fit: cover;
       border-radius: 10px;
     }
+
     .product h2 {
       font-size: 20px;
       margin: 10px 0 5px;
     }
+
     .product p {
       font-size: 14px;
     }
+
+
     footer {
       background-color: #d8b4dc;
       color: #4a004e;
       text-align: center;
-      padding: 15px;
-      margin-top: 40px;
+      padding: 30px;
       font-weight: bold;
+      width: 100%;
     }
-    @media (max-width: 768px) {
-      .products {
-        grid-template-columns: 1fr 1fr;
+
+    /* Responsive */
+    @media (max-width: 992px) {
+      .product {
+        width: 45%;
       }
     }
-    @media (max-width: 480px) {
-      .products {
-        grid-template-columns: 1fr;
+
+    @media (max-width: 600px) {
+      .product {
+        width: 100%;
       }
     }
+
   </style>
 </head>
 
 <body>
+  
   <nav>
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
@@ -96,40 +127,53 @@
     <a href="login.html">Login</a>
  </nav>
 
+  <!-- Main Content -->
   <div class="container">
     <h1>Welcome to PureRadiance</h1>
     <p>Experience the glow – PureRadiance brings you top skincare brands for naturally beautiful skin.</p>
+
     <div class="products">
       <div class="product">
-        <img src="image/Serum.jpg" alt="Serum" width="200" >
+        <img src="image/Serum.jpg" alt="Serum">
         <h2>Face Serum</h2>
         <p>Rejuvenate your skin with botanical-infused glow.</p>
       </div>
+
       <div class="product">
-        <img src="image/Sunscreen.jpg" alt="Sunscreen"  width="200" height="250">
-        <h2> Sunscreen</h2>
+        <img src="image/Sunscreen.jpg" alt="Sunscreen">
+        <h2>Sunscreen</h2>
         <p>Protect and hydrate naturally under the sun.</p>
       </div>
+
       <div class="product">
-        <img src="image/Cleanser.jpg" alt="Cleanser" width="200" height="250">
+        <img src="image/Cleanser.jpg" alt="Cleanser">
         <h2>Face Cleanser</h2>
         <p>Deeply clean without harsh chemicals.</p>
       </div>
+
       <div class="product">
         <img src="image/Moisturiser.jpg" alt="Moisturiser">
         <h2>Face Moisturiser</h2>
         <p>Lock in hydration all day long.</p>
       </div>
+
       <div class="product">
         <img src="image/Facemask.jpg" alt="Face Mask">
-        <h2> Face Mask</h2>
+        <h2>Face Mask</h2>
         <p>Calm and refresh with our natural mask.</p>
+      </div>
+
+      <div class="product">
+        <img src="image/facetoner.jpg" alt="Toner">
+        <h2>Face Toner</h2>
+        <p>Refresh and balance your skin's pH level.</p>
       </div>
     </div>
   </div>
 
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2025 PureRadiance. All rights reserved.</p>
+    &copy; 2025 PureRadiance. All rights reserved.
   </footer>
 </body>
 </html>
