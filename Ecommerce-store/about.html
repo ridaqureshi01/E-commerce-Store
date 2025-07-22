@@ -1,20 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About - PureRadiance</title>
   <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
+    * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      overflow: hidden; 
+      font-family: 'Segoe UI', sans-serif;
       background-color: #f9f4f9;
       color: #4a004e;
+    }
+
+    body {
       display: flex;
       flex-direction: column;
-      min-height: 100vh;
     }
 
     nav {
@@ -22,6 +29,7 @@
       padding: 15px;
       text-align: center;
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      flex-shrink: 0;
     }
 
     nav a {
@@ -38,29 +46,35 @@
     }
 
     .container {
-      padding: 40px;
+      flex: 1;
+      padding: 20px 30px;
+      overflow-y: auto;
       max-width: 800px;
       margin: auto;
     }
 
     h1 {
-      font-size: 36px;
+      font-size: 28px;
       color: #4d1e75;
       text-align: center;
+      margin-bottom: 20px;
     }
 
     p {
-      font-size: 18px;
-      line-height: 1.8;
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 20px;
     }
 
     footer {
       background-color: #d8b4dc;
       color: #4a004e;
       text-align: center;
-      padding: 30px;
+      padding: 20px;
       font-weight: bold;
-      width: 100%;
+      font-size: 16px;
+      border-top: 1px solid #ccc;
+      flex-shrink: 0;
     }
   </style>
 </head>

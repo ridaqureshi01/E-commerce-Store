@@ -1,27 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Login - PureRadiance</title>
   <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
-      display: flex;
-      flex-direction: column;
-        min-height: 100vh;
+      font-family: 'Segoe UI', sans-serif;
       background-color: #f9f4f9;
       color: #4a004e;
+      display: flex;
+      flex-direction: column;
     }
+
     nav {
       background-color: #d8b4dc;
       padding: 15px;
       text-align: center;
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      flex-shrink: 0;
     }
+
     nav a {
       color: #4a004e;
       margin: 0 20px;
@@ -30,28 +36,37 @@
       font-size: 18px;
       transition: color 0.3s;
     }
+
     nav a:hover {
       color: #cc98c6;
     }
+
     .container {
       max-width: 400px;
-      margin: 60px auto;
+      width: 100%;
+      margin: 40px auto;
       background-color: #e5cbe2;
       padding: 40px;
       border-radius: 16px;
       box-shadow: 0 6px 20px rgba(108, 52, 131, 0.15);
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
-    h1 {
+
+    h2 {
       text-align: center;
-      color:#4d1e75;
+      color: #4d1e75;
       font-size: 30px;
       margin-bottom: 30px;
     }
-input[type="email"],
+
+    input[type="email"],
     input[type="password"] {
       width: 100%;
       padding: 10px;
-      margin: 20px 0;
+      margin: 15px 0;
       border: 2px solid #dda0dd;
       border-radius: 8px;
       font-size: 16px;
@@ -62,10 +77,13 @@ input[type="email"],
       outline: none;
       border-color: #aa336a;
     }
+
     .buttons {
       display: flex;
       justify-content: space-between;
+      margin-top: 20px;
     }
+
     button {
       background-color: #880e4f;
       color: white;
@@ -77,35 +95,22 @@ input[type="email"],
       width: 48%;
       transition: background-color 0.3s ease;
     }
+
     button:hover {
       background-color: #aa336a;
     }
-    
+
     footer {
       background-color: #d8b4dc;
       color: #4a004e;
       text-align: center;
-      padding: 15px;
-      margin-top: 40px;
+      padding: 20px;
       font-weight: bold;
-      
-      text-align: center;
-     
       font-size: 16px;
       border-top: 1px solid #ccc;
-      margin-top: auto;
+      flex-shrink: 0;
     }
   </style>
-
-  <script>
-    function showPasswordField() {
-      const passwordField = document.getElementById("passwordField");
-      const initialButtons = document.getElementById("initialButtons");
-      passwordField.style.display = "block";
-      initialButtons.style.display = "none";
-    }
-  </script>
-  
 </head>
 <body>
   <nav>
@@ -113,30 +118,22 @@ input[type="email"],
     <a href="about.html">About</a>
     <a href="contact.html">Contact</a>
     <a href="login.html">Login</a>
-   </nav>
-   
+  </nav>
+
   <div class="container">
     <h2>Login to PureRadiance</h2>
     <form>
       <input type="email" placeholder="Enter your email" required>
-
-      <div id="passwordField" style="display: none;">
-        <input type="password" placeholder="Enter your password" required>
-        <div class="buttons" style="margin-top: 10px;">
-          <button type="button" onclick="window.location.href='signup.html'">Signup</button>
-          <button type="submit">Login</button>
-        </div>
-      </div>
-
-      <div class="buttons" id="initialButtons">
+      <input type="password" placeholder="Enter your password" required>
+      <div class="buttons">
         <button type="button" onclick="window.location.href='signup.html'">Signup</button>
-        <button type="button" onclick="showPasswordField()">Next</button>
+        <button type="submit">Login</button>
       </div>
     </form>
   </div>
- <footer>
-    <p>&copy; 2025 PureRadiance. All rights reserved.</p>
+
+  <footer>
+    &copy; 2025 PureRadiance. All rights reserved.
   </footer>
-  
 </body>
 </html>
